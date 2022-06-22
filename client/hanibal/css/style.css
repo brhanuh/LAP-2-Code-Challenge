@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700;900&family=Lora:ital@0;1&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#F9F1F5, #EDD4E0);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.cardsBody {
+    margin-top: 30px;
+}
+
+.row > div > div.card {
+    height: calc(100% - 15px);
+    margin-bottom: 15px;
+}
+
+.content {
+    max-width: 70%;
+    margin: auto;
+    padding: 10px;
+  }
