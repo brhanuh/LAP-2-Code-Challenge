@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories</title>
     <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script defer src="./static/js/script.js"></script>
 </head>
 <body>
     <header>
-        <img src="./Stories.png" alt="logo" id="logo">
+        <img src="./static/css/Stories.png" alt="logo" id="logo">
     </header>
     <section class="center-content">
-        <form action="">
+        <form id="postForm">
             <div>
                 <div class="input-box">
-                    <input type="text" class="post-input" placeholder="Title">
+                    <input type="text" class="post-input" placeholder="Title" id="post-title" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="post-input" placeholder="Username">
+                    <input type="text" class="post-input" placeholder="Username" id="post-username" required>
                 </div>
                 <div class="input-box">
-                    <textarea name="" id="entry" cols="30" rows="10" placeholder="What's your story?"></textarea>
+                    <textarea name="" id="entry" cols="30" rows="10" placeholder="What's your story?" required></textarea>
                 </div>
             </div>
             <div>
