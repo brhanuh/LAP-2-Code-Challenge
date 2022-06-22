@@ -1,0 +1,29 @@
+services:
+  api:
+    container_name: paired_programming
+    ports: 
+      - 3000:3000
+    environment: 
+      - PGUSER=futureproof
+      - PGHOST=db
+      - PGPASSWORD=pass
+      - PGDATABASE=shelter_dev
+      - PGPORT=5432
+      - NODE_ENV=development
+    depends_on:
+      - db
+    command: bash -c "npm install && npm run seedDev && npm run dev"
+
+  db:
+    container_name: paired_programming_db
+    volumes:
+      - "dbdata:/var/lib/postgresql/data"
+    environment: 
+      - POSTGRES_DB=shelter_dev
+      - POSTGRES_USER=futureproof
+      - POSTGRES_PASSWORD=pass
+volumes:
+  dbdata:
+networks: 
+  default:
+    name: paired_programming_dev
