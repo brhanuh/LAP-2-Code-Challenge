@@ -3,9 +3,9 @@ const db = require('../dbConfig/init');
 class Post {
     constructor(data){
         this.id = data.id
-        this.name = data.name
-        this.age = data.age
-        this.location = data.location
+        this.title = data.title
+        this.pseudonym = data.pseudonym
+        this.body = data.body
     }
 
     static get all() {
@@ -13,6 +13,7 @@ class Post {
             try {
                 const postsData = await db.query(`SELECT * FROM posts;`)
                 const posts = postsData.rows.map(d => new Post(d))
+                console.log(posts)
                 resolve(posts);
             } catch (err) {
                 reject("Error retrieving posts")
