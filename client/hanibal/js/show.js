@@ -13,12 +13,15 @@ async function loadHtml(){
     let htmlCode = ``;
     data.forEach(function(post) {
        htmlCode = htmlCode + `
-        <div class="col-sm-3">
+        <div class="col-sm-3 m-4">
             <div class="card">
                 <div class="card-body">
                     <h2 class="title">${post.title}</h2>
                     <h5 class="pseudoname">${post.pseudonym}</h5>
                     <p class="bodyText">${post.body}</p>
+                    <a href="./singlePost.html?id=${post.id}">
+                        <button type="button" class="allPosts-btn">Read more</button>
+                    </a>
                 </div>
             </div>
         </div>  

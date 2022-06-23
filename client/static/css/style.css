@@ -12,6 +12,26 @@ header{
     /* padding-top: 5vw; */
 }
 
+h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color:#5c5c5c;
+}
+
+h2{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color:#5c5c5c;
+}
+
+p{
+    font-family: Lora, serif;
+    font-size: 1rem;
+    color: rgb(0, 0, 0, .8);
+}
+
 form{
     display: flex;
     flex-direction: row;
@@ -35,8 +55,7 @@ textarea{
 }
 
 .input-box{
-    padding: 1vw;
-    
+    padding: 1vw; 
 }
 
 .post-input{
@@ -45,6 +64,19 @@ textarea{
     font-size: 1.9rem;
     background-color: transparent;
     border: none;
+}
+
+.display-content{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 70%;
+    margin-left: 8vw;
+}
+
+.singlePost{
+    display: flex;
+    flex-direction: column;
 }
 
 textarea:focus, .post-input:focus{
@@ -57,6 +89,24 @@ textarea:focus, .post-input:focus{
 
 #submit-btn{
     border-radius: 35px;
+    padding: 12px 45px;
+    margin-top: 1vw;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #5c5c5c;
+    border: 2px solid #5c5c5c;
+    color: white;
+    transition: 0.8s;
+}
+
+#submit-btn:hover{
+    background-color: transparent;
+    color: #5c5c5c;
+}
+
+.allPosts-btn{
+    border-radius: 35px;
     padding: 12px 25px;
     margin-top: 1vw;
     font-family: 'Lexend Deca', sans-serif;
@@ -68,7 +118,7 @@ textarea:focus, .post-input:focus{
     transition: 0.8s;
 }
 
-#submit-btn:hover{
+.allPosts-btn:hover{
     background-color: #5c5c5c;
     color: white;
 }

@@ -11,7 +11,9 @@
 </head>
 <body>
     <header>
-        <img src="./static/css/Stories.png" alt="logo" id="logo">
+        <a href="./index.html">
+            <img src="./static/css/Stories.png" alt="logo" id="logo">
+        </a>
     </header>
     <section class="center-content">
         <form id="postForm">
@@ -26,8 +28,15 @@
                     <textarea name="" id="body" cols="30" rows="10" placeholder="What's your story?" required></textarea>
                 </div>
             </div>
-            <div>
-                <input type="submit" id="submit-btn" value="Publish">
+            <div class="singlePost">
+                <div>
+                    <input type="submit" id="submit-btn" value="Publish">
+                </div>
+                <div>
+                    <a href="./show.html">
+                        <button type="button" class="allPosts-btn">See all posts</button>
+                    </a>
+                </div>
             </div>
         </form>
     </section>
