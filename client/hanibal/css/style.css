@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700;900&family=Lora:ital@0;1&display=swap');
+
+/* html{
+    height: 100%;
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#F9F1F5, #EDD4E0);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    /* padding-top: 5vw; */
+}
+
+.cardsContainer{
+    margin-top: 30px;
+}
+
+.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    min-height: 100vh;
+}
+
+.row > div > div.card {
+    height: calc(100% - 15px);
+    min-width: 300px;
+    /* margin: 15px; */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+
+.topContent{
+    margin: 5vw 0vw;
+}
+
+#logo{
+    margin-top: 2vw;
+}
+
+#searchbar{
+    min-width: 300px;
+    padding: 18px 18px;
+    border-radius: 35px;
+    color: #5c5c5c;
+    margin: 1vw;
+    border: 2px solid #5c5c5c;
+    outline: none;
+}
