@@ -1,20 +1,25 @@
-const submitBtn = document.querySelector('#submit-btn');
 const postForm = document.querySelector('#postForm');
-let result;
 
 async function submitPost (event) {
     event.preventDefault()
+    const postData = {
+        title: event.target.title.value,
+        pseudonym: event.target.pseudonym.value,
+        body: event.target.body.value
+    }
+    console.log(postData)
     try{
         let response = await fetch('http://localhost:3000/posts/',{
             method: 'POST',
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(Object.fromEntries(new FormData(postForm)))
+            body: JSON.stringify(postData)
         });
+    
         const { id, err } = await response.json();
         if (err){
             throw Error(err);
         }else{
-            window.location.hash = `/posts/${id}`;
+            window.location.href = `http://127.0.0.1:5500/client/singlePost.html?id=${id}`;
         }
 
     }catch(err){
@@ -23,26 +28,9 @@ async function submitPost (event) {
 
 }
 
-submitBtn.addEventListener('click', submitPost);
+postForm.addEventListener('submit', submitPost);
 
 
 
-const getSinglePost = async () => {
-	await fetch(`https://localhost:3000/posts/${id}`)
-		.then((res) => res.json())
-		.then(async (data) => {
-			result = data;
 
-            const title = document.querySelector('#title');
-			title.textContent = await result.title;
 
-            const username = document.querySelector('#username');
-            username.textContent = await result.username;
-
-            const postContent = document.querySelector('#postContent');
-            postContent.textContent = await result.body;
-
-        })
-
-        .catch((err) => console.log(err));
-}

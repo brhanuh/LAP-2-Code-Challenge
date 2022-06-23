@@ -33,6 +33,8 @@ class Post {
     };
 
     static async create(postData){
+        console.log(postData)
+        console.log('create post')
         return new Promise (async (resolve, reject) => {
             try{
                 const {title, pseudonym, body} = postData;
@@ -41,7 +43,7 @@ class Post {
                                                 RETURNING *;`, [title, pseudonym, body]);
                 resolve(result.rows[0]);
             }catch (err){
-                reject('Post not published')
+                reject('Post not published');
             }
         })
     }
